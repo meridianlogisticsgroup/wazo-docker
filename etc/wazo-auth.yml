@@ -7,9 +7,6 @@ db_uri: postgresql://asterisk:secret@postgres/wazo
 amqp:
   uri: amqp://guest:guest@rabbitmq:5672/
 
-enabled_backend_plugins:
-  ldap_user: false
-
 default_user_policy: null
 
 service_discovery:
