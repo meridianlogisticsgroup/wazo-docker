@@ -2,7 +2,7 @@ FROM wazoplatform/wazo-auth-cli
 
 RUN true \
     && pip install \
-      psycopg2-binary==2.8.6 \
+      psycopg2-binary==2.9.5 \
       https://github.com/wazo-platform/wazo-auth-keys/archive/master.zip \
     && mkdir -p /etc/wazo-auth-keys/conf.d \
     && mkdir -p /var/lib/wazo-auth-keys \
