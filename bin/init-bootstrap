@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -xe
 
 container_timeout=${INIT_TIMEOUT:-60}
 
@@ -100,7 +100,7 @@ TENANT_NAME='my-company'
 if [[ ! $(wazo-auth-cli tenant show $TENANT_NAME) = *$TENANT_NAME* ]]; then
   echo Executing wizard...
   CONFD_IP=$(dig +short confd)
-  GATEWAY=$(/sbin/ip route | awk '/default/ { print $3 }')
+  GATEWAY=$(/usr/sbin/ip route | awk '/default/ { print $3 }')
 
   curl --silent -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d "{
      \"admin_password\": \"secret\",
