@@ -13,3 +13,6 @@
       jobs:
         - wazo-docker-uc:
             nodeset: vm-debian-12-m1m
+    auto-merge:
+      jobs:
+        - noop
