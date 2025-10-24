@@ -2,8 +2,7 @@ services:
   nginx:
     image: nginx
     ports:
-      - '127.0.0.1::443'
-      - '[::1]::443'
+      - ':443'
     env_file:
       - variables.env
     volumes:
